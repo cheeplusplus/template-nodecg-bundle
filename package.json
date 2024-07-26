@@ -1,0 +1,67 @@
+{
+  "name": "template-nodecg-bundle",
+  "version": "1.0.0",
+  "description": "template bundle for NodeCG",
+  "private": "true",
+  "scripts": {
+    "build": "parcel build",
+    "watch": "parcel watch"
+  },
+  "author": "Kauko <kauko@biosynth.link>",
+  "license": "MIT",
+  "browserslist": "last 2 chrome versions",
+  "targets": {
+    "dashboard": {
+      "source": [
+        "./src/dashboard/settings-panel.html"
+      ],
+      "distDir": "./dashboard/",
+      "context": "browser",
+      "publicUrl": "."
+    },
+    "extension": {
+      "source": "./src/extension/index.ts",
+      "distDir": "./extension/",
+      "context": "node"
+    },
+    "graphics": {
+      "source": [
+        "./src/graphics/example.html"
+      ],
+      "distDir": "./graphics/",
+      "context": "browser",
+      "publicUrl": "."
+    }
+  },
+  "nodecg": {
+    "compatibleRange": "^2.1.2",
+    "dashboardPanels": [
+      {
+        "name": "Settings",
+        "title": "Settings",
+        "width": 2,
+        "file": "settings-panel.html"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "example.html",
+        "width": 640,
+        "height": 480
+      }
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@nodecg/types": "^2.1.2",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "parcel": "^2.8.3",
+    "prettier": "^3.3.3",
+    "typescript": "^5.0.4"
+  }
+}

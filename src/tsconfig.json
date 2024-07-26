@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ES2022",
+        "noImplicitAny": true,
+        "moduleResolution": "NodeNext",
+        "jsx": "react",
+        "noEmit": true
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "../node_modules/@nodecg/types/augment-window.d.ts"
+    ]
+}
